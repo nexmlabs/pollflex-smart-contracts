@@ -1,5 +1,7 @@
 {
   "dev": {},
-  "bsctest": {},
+  "bsctest": {
+    "WordBreak": "0xE873EDF8e5135234835aa39878BDf9FC0a5C950C"
+  },
   "main": {}
 }

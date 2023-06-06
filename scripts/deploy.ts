@@ -6,7 +6,7 @@ async function main() {
   const [deployer] = await ethers.getSigners();
   console.log('deploy from address: ', deployer.address);
 
-  const WordBreak = await ethers.getContractFactory("WordBreak");
+  const WordBreak = await ethers.getContractFactory("MarketPrediction");
   const wordBreak: any = await WordBreak.deploy();
   console.log('stman verify address: ', wordBreak.address);
   Config.setConfig(network + '.WordBreak', wordBreak.address);

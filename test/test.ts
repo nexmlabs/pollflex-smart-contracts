@@ -25,8 +25,8 @@ describe("MarketPrediction", function () {
     await hardhatMarketPrediction.createVote(bytes);
 
     const ipfsHashReceive = await hardhatMarketPrediction.getIpfsHash(1);
-    const ipfsHashRevert = ethers.utils.toUtf8String(ipfsHashReceive);
+    const bytesRevert = ethers.utils.toUtf8String(ipfsHashReceive);
 
-    expect(ipfsHash).to.equal(ipfsHashRevert);
+    expect(ipfsHash).to.equal(bytesRevert);
   });
 });
