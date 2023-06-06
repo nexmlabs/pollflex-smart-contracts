@@ -1,0 +1,6 @@
+{
+  "type": "vote",
+  "title": "Food",
+  "options": ["Pho", "Rice"],
+  "dateLimit": "06/06/2023"
+}

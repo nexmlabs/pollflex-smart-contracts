@@ -1,0 +1,6 @@
+{
+  "type": "vote",
+  "title": "Nation",
+  "options": ["VietNam", "Tokyo"],
+  "dateTime": "05/06/2023"
+}

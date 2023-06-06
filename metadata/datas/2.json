@@ -1,0 +1,15 @@
+{
+  "type": "form",
+  "title": "Food",
+  "fields": [
+    {
+      "type": "string",
+      "description": "Bread"
+    },
+    {
+      "type": "select",
+      "options": ["Rice", "Pho"]
+    }
+  ],
+  "dateTime": "05/06/2023"
+}

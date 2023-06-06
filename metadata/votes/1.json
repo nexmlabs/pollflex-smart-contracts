@@ -1,0 +1,6 @@
+{
+  "type": "vote",
+  "title": "Nation",
+  "options": ["VietNam", "Tokyo", "London", "Singapore"],
+  "dateLimit": false
+}

@@ -1,0 +1,15 @@
+{
+  "type": "form",
+  "title": "Nation",
+  "fields": [
+    {
+      "type": "string",
+      "description": ""
+    },
+    {
+      "type": "select",
+      "options": ["VietNam", "Tokyo", "London", "Singapore"]
+    }
+  ],
+  "dateLimit": false
+}
