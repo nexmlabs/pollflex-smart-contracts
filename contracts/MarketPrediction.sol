@@ -1,31 +1,26 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
-contract MarketPrediction is Ownable, AccessControl {
+contract MarketPrediction is AccessControl {
     /**variable*/
     using Counters for Counters.Counter;
     Counters.Counter private _voteId;
-    Counters.Counter private _formId;
     Counters.Counter private _dataId;
 
     string private _voteUrl;
-    string private _formUrl;
     string private _dataUrl;
 
+    mapping(uint256 => bytes) private _ipfsHash;
     mapping(uint256 => address) private _ownersVote;
-    mapping(uint256 => address) private _ownersForm;
     mapping(uint256 => address) private _ownersData;
 
     mapping(uint256 => mapping(address => bool)) hasVoted;
-    mapping(uint256 => mapping(address => bool)) hasSubmittedForm;
     mapping(uint256 => mapping(address => string)) voteData;
 
     event CreateVote(address indexed from, uint256 indexed voteId);
-    event CreateForm(address indexed from, uint256 indexed formId);
 
     bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
@@ -36,39 +31,24 @@ contract MarketPrediction is Ownable, AccessControl {
     }
 
     /**function */
-    function createVote() external returns (uint256) {
+    function createVote(bytes memory ipfsHash) public {
         require(msg.sender != address(0), "Invalid sender address.");
-
         _voteId.increment();
         uint256 _voteIdCurrent = _voteId.current();
-
-        require(
-            _ownersVote[_voteIdCurrent] == address(0),
-            "Vote already created for this ID."
-        );
+        _ipfsHash[_voteIdCurrent] = ipfsHash;
         _ownersVote[_voteIdCurrent] = msg.sender;
-
         emit CreateVote(msg.sender, _voteIdCurrent);
-        return _voteIdCurrent;
     }
 
-    function createForm() external returns (uint256) {
-        require(msg.sender != address(0), "Invalid sender address.");
-
-        _formId.increment();
-        uint256 _formIdCurrent = _formId.current();
-
-        require(
-            _ownersForm[_formIdCurrent] == address(0),
-            "Form already created for this ID."
-        );
-        _ownersForm[_formIdCurrent] = msg.sender;
-
-        emit CreateForm(msg.sender, _formIdCurrent);
-        return _formIdCurrent;
+    function getIpfsHash(uint256 id) public view returns (bytes memory) {
+        return _ipfsHash[id];
     }
 
-    function submitVote(uint256 _submitId) {}
+    function submitVote(
+        uint256 _submitVoteId,
+        uint256 _nonce,
+        bytes[] calldata _multiSignature
+    ) external {}
 
     function addAdmin(address account) public onlyRole(DEFAULT_ADMIN_ROLE) {
         grantRole(ADMIN_ROLE, account);
