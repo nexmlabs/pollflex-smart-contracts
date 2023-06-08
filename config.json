@@ -1,1 +1,5 @@
-{}
+{
+  "bnbchainTestnet": {
+    "VotePollV1": "0x4fc823663Ea711fC0d1297305adB50D438d75BDA"
+  }
+}
