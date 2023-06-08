@@ -1,16 +1,35 @@
-# Sample Hardhat Project
+# Nexm Blockchain Vote 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Developing a decentralized application (DApp) on the blockchain that allows users to create and fill forms, as well as vote in various events or polls. The application will leverage the transparency, immutability, and security features provided by the blockchain technology.
 
-Try running some of the following tasks:
+The project aims to develop a Dapp on the Ethereum blockchain utilizing the Ethereum Virtual Machine (EVM). The initial focus will be on creating forms and conducting votes, leveraging the transparency and security features provided by the EVM.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+The project may later expand to include market prediction capabilities, utilizing smart contracts and the EVM's functionality for decentralized trading and settlement.
+
+## Install dependences
+
+```bash
+pnpm install
 ```
 
-https://faucet.quicknode.com/binance-smart-chain
-https://testnet.binance.org/faucet-smart/
+## Test
+
+```bash
+pnpm run test
+REPORT_GAS=true pnpm run test
+```
+
+## Deploy
+
+```bash
+pnpm run:gnosis <path to file>
+pnpm run:avax <path to file>
+pnpm run:bnb <path to file>
+```
+
+## MVP1
+
+- Create vote poll, form;
+- Submit vote, form; Can only submit 1 time, can not edit;
+- Can get vote poll format;
+- Can get vote data detail;
