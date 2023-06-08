@@ -11,3 +11,6 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
+
+https://faucet.quicknode.com/binance-smart-chain
+https://testnet.binance.org/faucet-smart/

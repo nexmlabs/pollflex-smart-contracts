@@ -1,0 +1,5 @@
+{
+  "type": "vote",
+  "option": ["Tokyo", "London", "Singapore"],
+  "dateLimit": false
+}
