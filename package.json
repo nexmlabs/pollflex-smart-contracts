@@ -4,6 +4,7 @@
   "scripts": {
     "compile": "hardhat compile",
     "run:gnosis": "hardhat run --network gnosis",
+    "run:chiado": "hardhat run --network chiado",
     "run:avax": "hardhat run --network avax",
     "run:bnb": "hardhat run --network bnbchain",
     "run:bnbTestnet": "hardhat run --network bnbchainTestnet",

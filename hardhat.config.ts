@@ -18,6 +18,15 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIV_KEY!],
       timeout: 2_147_483_647,
     },
+    // https://docs.gnosischain.com/developers/smart-contracts/hardhat
+    chiado: {
+      url: `https://rpc.chiadochain.net`,
+      chainId: 10200,
+      accounts: [process.env.PRIV_KEY!],
+      timeout: 2_147_483_647,
+      gas: 500000,
+      gasPrice: 1000000000,
+    },
     avax: {
       url: `https://avalanche-c-chain.publicnode.com`,
       chainId: 43114,

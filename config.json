@@ -1,5 +1,8 @@
 {
   "bnbchainTestnet": {
     "VotePollV1": "0x4fc823663Ea711fC0d1297305adB50D438d75BDA"
+  },
+  "chiado": {
+    "VotePollV1": "0x149b64fe1076aF54c7D5B929F3Dd2664B85f0Ca2"
   }
 }
