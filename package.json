@@ -6,6 +6,7 @@
     "run:gnosis": "hardhat run --network gnosis",
     "run:chiado": "hardhat run --network chiado",
     "run:avax": "hardhat run --network avax",
+    "run:avaxTestnet": "hardhat run --network avaxTestnet",
     "run:bnb": "hardhat run --network bnbchain",
     "run:bnbTestnet": "hardhat run --network bnbchainTestnet",
     "test": "pnpm run compile && hardhat test",

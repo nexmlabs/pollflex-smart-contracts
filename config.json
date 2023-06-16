@@ -4,5 +4,8 @@
   },
   "chiado": {
     "VotePollV1": "0x149b64fe1076aF54c7D5B929F3Dd2664B85f0Ca2"
+  },
+  "avaxTestnet": {
+    "VotePollV1": "0x149b64fe1076aF54c7D5B929F3Dd2664B85f0Ca2"
   }
 }

@@ -19,6 +19,7 @@ const config: HardhatUserConfig = {
       timeout: 2_147_483_647,
     },
     // https://docs.gnosischain.com/developers/smart-contracts/hardhat
+    // https://gnosisfaucet.com/
     chiado: {
       url: `https://rpc.chiadochain.net`,
       chainId: 10200,
@@ -30,6 +31,16 @@ const config: HardhatUserConfig = {
     avax: {
       url: `https://avalanche-c-chain.publicnode.com`,
       chainId: 43114,
+      gasPrice: 225000000000,
+      accounts: [process.env.PRIV_KEY!],
+      timeout: 2_147_483_647,
+    },
+    // https://docs.avax.network/dapps/developer-toolchains/using-hardhat-with-the-avalanche-c-chain
+    // https://core.app/tools/testnet-faucet/?token=C
+    avaxTestnet: {
+      url: "https://api.avax-test.network/ext/bc/C/rpc",
+      gasPrice: 225000000000,
+      chainId: 43113,
       accounts: [process.env.PRIV_KEY!],
       timeout: 2_147_483_647,
     },
